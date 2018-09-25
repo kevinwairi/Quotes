@@ -10,10 +10,11 @@ import { Quote } from '@angular/compiler';
 export class QuoteComponent implements OnInit {
 
   quotes: Quotes[] = [
-    new Quotes(1, 'moha1', 'to be or not be', 'willy', 0, 0, new Date()),
-    new Quotes(2, 'moha0', 'to beeeee or not be', 'willy shakes', 0, 0, new Date()),
-    new Quotes(3, 'moha1', 'to be or not be', 'willy2', 0, 0, new Date()),
-    new Quotes(4, 'moha3', 'to bee or not be', 'willy shake', 0, 0, new Date()),
+    new Quotes(1, 'kevin', 'The eye should learn to listen before it looks.', 'Robert Frank', 0, 0, new Date()),
+    new Quotes(2, 'kevin', 'Which of my photographs is my favorite? The one I’m going to take tomorrow', 'Imogen Cunningham', 0, 0, new Date()),
+    new Quotes(3, 'kevin', 'Character, like a photograph, develops in darkness', 'Yousuf Karsh', 0, 0, new Date()),
+    new Quotes(4, 'kevin', 'It is more important to click with people than to click the shutter', 'Alfred Eisenstaedt', 0, 0, new Date()),
+    new Quotes(3, 'kevin', 'My life is shaped by the urgent need to wander and observe, and my camera is my passport.', 'Steve McCurry', 0, 0, new Date()),
   // tslint:disable-next-line:semicolon
   ]
 
