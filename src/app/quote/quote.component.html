@@ -1,18 +1,17 @@
 <div class="container">
+			<h1 class="display-2 my-title">Quotes</h1>
+			<hr>
+			<p class="lead my-p">This is a simple page where users can submit quotes, they can also upvote and downvote the quotes.The form shows the original author, the text of the quote and name of the user who Published it.</p>
+			<hr class="my-4">
+			<p class="lead">
+			
+			</p>
 	<div class="row">
-		<div class="jumbotron quotes">
-				<h1 class="display-3">Quotes</h1>
-				<p class="lead">This is a simple page where users can submit quotes, they can also upvote and downvote the quotes.The form shows the original author, the text of the quote and name of the user who lorem ipsum dolor sit amet.</p>
-				<hr class="my-4">
-				<p class="lead">
-				<app-quote-form (addQuote)="addNewQuote($event)"><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></app-quote-form>
-				</p>
-		</div>
-  </div>
-	<div class="row">
-			<div class="jumbotron quotes">
+		<div class="col-sm-5"><app-quote-form (addQuote)="addNewQuote($event)"><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></app-quote-form></div>
+		<div class="col-sm-7">
+			<div>
 					<ul>
-							<li *ngFor='let quote of quotes; let i = index'>
+							<li *ngFor='let quote of quotes; let i = index' class="my-quote">
 									<div class="card text-white bg-secondary mb-3 quotes">
 													<div class="card-header">{{quote.name}}</div>
 															<div class="card-body">
@@ -30,5 +29,7 @@
 							</li>
 					</ul>
 			</div>
+		</div>
+			
 	</div>
 </div>
