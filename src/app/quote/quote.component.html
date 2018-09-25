@@ -1,0 +1,34 @@
+<div class="container">
+	<div class="row">
+		<div class="jumbotron quotes">
+				<h1 class="display-3">Quotes</h1>
+				<p class="lead">This is a simple page where users can submit quotes, they can also upvote and downvote the quotes.The form shows the original author, the text of the quote and name of the user who lorem ipsum dolor sit amet.</p>
+				<hr class="my-4">
+				<p class="lead">
+				<app-quote-form (addQuote)="addNewQuote($event)"><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></app-quote-form>
+				</p>
+		</div>
+  </div>
+	<div class="row">
+			<div class="jumbotron quotes">
+					<ul>
+							<li *ngFor='let quote of quotes; let i = index'>
+									<div class="card text-white bg-secondary mb-3 quotes">
+													<div class="card-header">{{quote.name}}</div>
+															<div class="card-body">
+																	<h4 class="card-title">{{quote.quoteWords}}</h4>
+																	<p class="card-text"></p>
+															</div>
+															<div class="card-footer">{{quote.author}}</div>
+															<button type="button" class="btn btn-outline-secondary">{{quote.date|date}}</button>
+                              <p>This quote was posted {{quote.date|date|time}} days ago</p>
+                              <button type="button" class="btn btn-danger" (click) ='deleteQuote()'>Delete Quote</button>
+													<app-quote-info [quote]='quote'></app-quote-info>
+									</div>
+
+
+							</li>
+					</ul>
+			</div>
+	</div>
+</div>
