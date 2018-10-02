@@ -1,29 +1,18 @@
-<div class="container-fluid">
-  <div class="row col-centered">
+<div class="container">
     <form (ngSubmit)= 'submitQuote()' #quoteForm='ngForm'>
-      <!-- id -->
-      <!-- <p>{{quote.id}}</p> -->
-      <!-- Name Form -->
       <div class="form-group ">
-        <label for="name">Publisher</label>
-        <input type="text"  class="form-control" id="name" [(ngModel)]="newQuote.name" name="name" #name="ngModel" placeholder="Enter name" required>
-
+        <input type="text"  class="form-control" id="name" [(ngModel)]="newQuote.name" name="name" #name="ngModel" placeholder="Enter name of Publisher" required>
       </div>
 
-
       <!-- Quote Form -->
-      <div class="form-group row text-center">
-        <label for="quoteWords">Quote</label>
-        <textarea class="form-control" id="quoteWords" rows="4" [(ngModel)]="newQuote.quoteWords" name="quoteWords" #quoteWords="ngModel" placeholder="Enter Quote" required></textarea>
+      <div class="form-group">
+        <textarea class="form-control" id="quoteWords" rows="4" [(ngModel)]="newQuote.quoteWords" name="quoteWords" #quoteWords="ngModel" placeholder="Enter Quote here" required></textarea>
       </div>
 
       <!-- Author Form -->
       <div class="form-group">
-        <label for="quoteWords">Author</label>
-        <input type="text"  class="form-control" id="author" [(ngModel)]="newQuote.author" name="author" #author="ngModel" placeholder="Enter author" required>
+        <input type="text"  class="form-control" id="author" [(ngModel)]="newQuote.author" name="author" #author="ngModel" placeholder="Enter the Authors name" required>
       </div>
-      <button type="button" class="btn btn-primary" (click)='submitQuote()'>Add quote</button>
-
+      <button type="button" class="btn btn-info" (click)='submitQuote()'>Add quote</button>
     </form>
-  </div>
 </div>
