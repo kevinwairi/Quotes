@@ -1,6 +1,4 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.css";
-@import url('https://fonts.googleapis.com/css?family=Kaushan+Script|Lobster|Permanent+Marker');
-body{
-	background-color: #6971791a;
-}
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script|Marvel');
+
