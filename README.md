@@ -1,17 +1,17 @@
 # Quotes with Angular
 
-##Created by Kevin Wairi
+## Created by Kevin Wairi
 
-##Description
+## Description
 Quotes is a webApp that helps users to publish famous to the website Quotes . 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.3.
 
-##Prerequisites
+## Prerequisites
  1. Globally installed Nativecript - npm install -g nativescript
  2. Globally installed Angular CLI - npm install -g angular-cli
  3. Computer to build your project
 
-##Installation
+## Installation
 git clone https://github.com/kevinwairi/Quotes.git.
 
 ## Run Web application
