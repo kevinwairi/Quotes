@@ -1,34 +1,23 @@
 <div class="container">
-			<h1 class="display-2 my-title">Quotes</h1>
-			<hr>
+			<h1 class=" my-title">Quotes</h1>
 			<p class="lead my-p">This is a simple page where users can submit quotes, they can also upvote and downvote the quotes.The form shows the original author, the text of the quote and name of the user who Published it.</p>
 			<hr class="my-4">
 			<p class="lead">
 			
 			</p>
 	<div class="row">
-		<div class="col-sm-5"><app-quote-form (addQuote)="addNewQuote($event)"><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></app-quote-form></div>
-		<div class="col-sm-7">
-			<div>
-					<ul>
-							<li *ngFor='let quote of quotes; let i = index' class="my-quote">
-									<div class="card text-white bg-secondary mb-3 quotes">
-													<div class="card-header">{{quote.name}}</div>
-															<div class="card-body">
-																	<h4 class="card-title">{{quote.quoteWords}}</h4>
-																	<p class="card-text"></p>
-															</div>
-															<div class="card-footer">{{quote.author}}</div>
-															<button type="button" class="btn btn-outline-secondary">{{quote.date|date}}</button>
-                              <p>This quote was posted {{quote.date|date|time}} days ago</p>
-                              <button type="button" class="btn btn-danger" (click) ='deleteQuote()'>Delete Quote</button>
-													<app-quote-info [quote]='quote'></app-quote-info>
-									</div>
+		<div class="col-sm-4"><app-quote-form (addQuote)="addNewQuote($event)"><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></app-quote-form></div>
+		<div class="col-sm-4">
+		   <div *ngFor='let quote of quotes; let i = index' class="card ">
+				<div class="card-body">
+					<h4 class="card-title">{{quote.quoteWords}}</h4>
+				</div>
+				  <button class="btn btn-info" (click)='toogleDetails(i)'>Toogle Details</button>
+				<div class="card-footer">
+					<app-quote-info *ngIf="quote.showDescription" [quote]='quote'></app-quote-info>
+				</div>
+		   </div>
 
-
-							</li>
-					</ul>
-			</div>
 		</div>
 			
 	</div>
