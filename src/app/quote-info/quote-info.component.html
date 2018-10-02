@@ -1,4 +1,9 @@
-<!-- <p>{{quote.name}}, {{quote.quoteWords}}, {{quote.author}}</p> -->
-<p>{{quote.upvote}}, {{quote.downvote}}</p>>
-									<button type="button" class="btn btn-success" (click) ='upvoteQuote()'>Upvote</button>
+<p class="card-text ">Author :- {{quote.author}}</p>
+<p>{{quote.upvote}} | {{quote.downvote}}</p>
+<p class="card-text">Publisher by :- {{quote.name}}</p>	
+<button type="button" class="btn btn-success" (click) ='upvoteQuote()'>Upvote</button>   	
 <button type="button" class="btn btn-secondary" (click) ='downvoteQuote()'>Downvote</button>
+
+<button type="button" class="btn">{{quote.date|date}}</button>
+<p>This quote was posted {{quote.date|date|time}} days ago</p>
+<button type="button" class="btn btn-danger" (click) ='deleteQuote()'>Delete Quote</button>
